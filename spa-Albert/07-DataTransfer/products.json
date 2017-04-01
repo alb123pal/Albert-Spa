@@ -1,0 +1,32 @@
+[
+  {
+    "id": 234,
+    "name": "Oriental Book Style Box",
+    "price": 12.5,
+    "instock": true
+  },
+  {
+    "id": 751,
+    "name": "Black Tape Dispenser and Tape",
+    "price": 9.1,
+    "instock": false
+  },
+  {
+    "id": 302,
+    "name": "Sticky Notes Memo Set",
+    "price": 4,
+    "instock": true
+  },
+  {
+    "id": 892,
+    "name": "Plus Power AA Batteries - Pack Of 12",
+    "price": 25.99,
+    "instock": true
+  },
+  {
+    "id": 109,
+    "name": "Magnetic Whiteboard and Dry Wipe Marker Set",
+    "price": 37,
+    "instock": false
+  }
+]

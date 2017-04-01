@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html onclick="stworzTabele()">
+	<head>
+		<title>Create DOM elements</title>
+		<meta charset="UTF-8">
+		<style>
+			thead {
+				font-weight: 700;
+				background-color: grey;
+			}
+
+		</style>
+
+	</head>
+	<body>
+		<script>
+			// a JavaScript code here ...
+			function stworzTabele() {
+                var body = document.getElementsByTagName("body")[0];
+
+                // create elements <table> and a <tbody>
+                var tbl = document.createElement("table");
+                var thlBody = document.createElement("thead");
+                var tblBody = document.createElement("tbody");
+
+                // cells creation
+               // for (var j = 0; j <= 2; j++) {
+                    // table row creation
+                    var row = document.createElement("tr");
+						//create thead element
+
+                        var cell = document.createElement("td");
+                        var cellText = document.createTextNode("Email");
+						var cell2 = document.createElement("td");
+						var cellTxt2 = document.createTextNode("Connecting to the Internet")
+                        cell.appendChild(cellText);
+						cell2.appendChild(cellTxt2);
+                        row.appendChild(cell);
+                        row.appendChild(cell2);
+
+                        //create first tbody element
+						var row2 = document.createElement("tr");
+
+                        cell = document.createElement("td");
+                        cellText = document.createTextNode("receive/get/open an email");
+                        cell2 = document.createElement("td");
+                        cellTxt2 = document.createTextNode("use/access/log onto the Internet");
+
+                        cell.appendChild(cellText);
+                        cell2.appendChild(cellTxt2);
+
+                        row2.appendChild(cell);
+                        row2.append(cell2);
+
+
+                        //create second tbody element
+					    var row3 = document.createElement("tr");
+
+						cell = document.createElement("td");
+						cellText = document.createTextNode("exchange email addresses");
+						cell2 = document.createElement("td");
+						cellTxt2 = document.createTextNode("access/connect to/locate the server");
+
+						cell.appendChild(cellText);
+						cell2.appendChild(cellTxt2);
+
+						row3.appendChild(cell);
+						row3.append(cell2);
+
+						//create third tbody element
+					    var row4 = document.createElement("tr");
+
+						cell = document.createElement("td");
+						cellText = document.createTextNode("open/send/contain an attachment");
+						cell2 = document.createElement("td");
+						cellTxt2 = document.createTextNode("browse/surf/search/scour the Internet");
+
+						cell.appendChild(cellText);
+						cell2.appendChild(cellTxt2);
+
+						row4.appendChild(cell);
+						row4.append(cell2);
+
+						//create third tbody element
+					    var row5 = document.createElement("tr");
+
+						cell = document.createElement("td");
+						cellText = document.createTextNode("open/check your inbox");
+						cell2 = document.createElement("td");
+						cellTxt2 = document.createTextNode("install/use/configure a firewall");
+
+						cell.appendChild(cellText);
+						cell2.appendChild(cellTxt2);
+
+						row5.appendChild(cell);
+						row5.append(cell2);
+
+
+                //row added to end of table body
+					thlBody.appendChild(row);
+                    tblBody.appendChild(row2);
+                    tblBody.appendChild(row3);
+                    tblBody.appendChild(row4);
+                    tblBody.appendChild(row5);
+              //  }
+
+                // append the <tbody> inside the <table>
+				tbl.appendChild(thlBody);
+                tbl.appendChild(tblBody);
+                // put <table> in the <body>
+                body.appendChild(tbl);
+                // tbl border attribute to
+				tbl.setAttribute("align", "center");
+				tbl.setAttribute("cellPadding", "5");
+                tbl.setAttribute("border", "1");
+			}
+
+
+
+		</script>
+	</body>
+</html>

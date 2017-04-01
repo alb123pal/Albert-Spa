@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Storage</title>
+</head>
+<body>
+Name: <div id="name"></div>
+Surname: <div id="surname"></div>
+<script>
+    localStorage.setItem("name", "Albert");
+    localStorage.setItem("surname", "Palka");
+    localStorage.setItem("surname", "Palka");
+    console.log(localStorage.getItem("name"));
+    document.getElementById("name").innerHTML = localStorage.getItem("name");
+    document.getElementById("surname").innerHTML = localStorage.getItem("surname");
+    localStorage.clear();
+    console.log(localStorage.getItem("name"));
+
+
+</script>
+
+</body>
+</html>
+

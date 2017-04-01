@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="angular.min.js"></script>
+</head>
+
+<body>
+
+	<h1>The area of a square</h1>
+	<div ng-app="" ng-init="square={sideLength:0}"> 
+
+		<p>Square side length: <input type="number" ng-model="square.sideLength"></p>
+		<p>The area of a square is <b>{{square.sideLength * square.sideLength}}</b></p>
+	</div>
+
+</body>
+</html>

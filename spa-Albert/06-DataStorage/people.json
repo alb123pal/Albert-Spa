@@ -1,0 +1,98 @@
+[
+  {
+  "name" : "Albert",
+  "surname": "Palka",
+  "age": 21,
+  "email": "albertpalka1995@gmail.com",
+  "phone": {
+    "landline": "+48",
+    "mobile": "662 793 549"
+  },
+
+  "adress" : {
+    "street" : "Aleja 3 Maja",
+    "numberHome" : 5,
+    "postalCode" : "34-500",
+    "city": "Zakopane"
+  },
+
+  "interest" : [
+    "football",
+    "coding",
+    "healty life-style"
+  ],
+  "family" : {
+    "girlfriend" : [
+       "Natalia",
+       "Wróbel"
+    ],
+    "brother" : [
+      "Szymon",
+      "Palka"
+      ]
+
+  },
+
+  "children" : [
+      {
+        "name": "Bartlomiej",
+        "surname": "Blaszczak",
+        "age" : 20
+        },
+      {
+        "name" : "Andrzej",
+        "surname": "Sowa",
+        "age" : 25
+
+      }
+    ]
+  },
+  {
+    "name" : "Szymon",
+    "surname": "Palka",
+    "age": 21,
+    "email": "albertpalka1995@gmail.com",
+    "phone": {
+      "landline": "+48",
+      "mobile": "662 793 549"
+    },
+
+    "adress" : {
+      "street" : "Aleja 3 Maja",
+      "numberHome" : 5,
+      "postalCode" : "34-500",
+      "city": "Zakopane"
+    },
+
+    "interest" : [
+      "football",
+      "coding",
+      "healty life-style"
+    ],
+    "family" : {
+      "girlfriend" : [
+        "Natalia",
+        "Wróbel"
+      ],
+      "brother" : [
+        "Szymon",
+        "Palka"
+      ]
+
+    },
+
+    "children" : [
+      {
+        "name": "Bartlomiej",
+        "surname": "Blaszczak",
+        "age" : 20
+      },
+      {
+        "name" : "Andrzej",
+        "surname": "Sowa",
+        "age" : 25
+
+      }
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Houses for sale</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Houses for sale</h1>
+		<button type="button" onclick="createHouse(3,250000,123456789,'Zakopene','garden')">Click Me!</button>
+		<button type="button" onclick="stworzTelefon()">Click Me!</button>
+		<button type="button" onclick="stworzTelefon()">Click Me!</button>
+		<script>
+            var house = {
+                bedroom: null	,
+                prize: null,
+                phone: null,
+                adress:		{street: null, lokal: null, town: null},
+                facility: [],
+            };
+
+            function createHouse(arg1, arg2, arg3, arg4, arg5){
+                house.bedroom = arg1;
+                house.prize = arg2;
+                house.phone = arg3;
+                house.adress.town = arg4;
+                house.bedroom = arg5;
+			}
+
+            function changePrice(arg1){
+                house.prize = arg1;
+			}
+
+			function addFacility(newFacility){
+				house.facility[newFacility];
+			}
+
+			function description(){
+			    var domek =  house.bedroom + "\n" +
+                    house.prize + "\n" +
+                    house.phone + "\n" +
+                    house.adress.street + "\n" + house.adress.lokal + "\n" + house.adress.town +
+                    house.facility;
+			    console.log(domek);
+			    return domek;
+			}
+
+
+		</script>
+	</body>
+</html>

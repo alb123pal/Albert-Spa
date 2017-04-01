@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var db = openDatabase('bazaStudenci', '1.0,', 'Test', 1*1024*1024);
+    var msg;
+
+    db.transaction(function (tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS USERS (name, surname, age, username, email )');
+        tx.executeSql('INSERT INTO USERS (name, surname, age, username, email) VALUES ("Albert", "Palka", 21, "alb123pal", "alb123pal@op.pl")');
+        tx.executeSql('INSERT INTO USERS (name, surname, age, username, email) VALUES ("Beverly", "Bell", 35, "bbell0", "bbell0@storify.com")');
+        tx.executeSql('INSERT INTO USERS (name, surname, age, username, email) VALUES ("Jane", "Fields", 35, "jfields1", "jfields1@privacy.gov.au")');
+        tx.executeSql('INSERT INTO USERS (name, surname, age, username, email) VALUES ("Jane", "Simmons", 25, "jsimmons2", "jsimmons2@discovery.com")');
+        tx.executeSql('INSERT INTO USERS (name, surname, age, username, email) VALUES ("Russell", "Garrett", 35, "rgarrett3", "rgarrett3@php.net")');
+        tx.executeSql('INSERT INTO USERS (name, surname, age, username, email) VALUES ("Lori", "Dixon", 23, "ldixon4", "ldixon4@myspace.com")');
+        msg = '<p>Log message created and row inserted.</p>';
+        document.querySelector('#status').innerHTML =  msg;
+    });
+
+    db.transaction(function (tx) {
+        tx.executeSql('SELECT * FROM USERS order by surname, name ', [], function (tx, results) {
+            var len = results.rows.length, i;
+            msg = "<p>Found rows: " + len + "</p>";
+            document.querySelector('#status').innerHTML +=  msg;
+
+            for (i = 0; i < len; i++){
+                console.log(results.rows.item(i));
+            }
+        }, null);
+    });
+
+
+</script>
+
+    <div id="status" name="status">Status Manager</div>
+
+</body>
+</html>

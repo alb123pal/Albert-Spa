@@ -1,0 +1,28 @@
+{
+  "academyAwards": [
+    {
+      "year": 2015,
+      "bestPicture": "Spotlight",
+      "bestActor": "Leonardo DiCaprio",
+      "bestActress": "Brie Larson"
+    },
+    {
+      "year": 2014,
+      "bestPicture": "Birdman",
+      "bestActor": "Eddie Redmayne",
+      "bestActress": "Julianne Moore"
+    },
+    {
+      "year": 2013,
+      "bestPicture": "12 Years a Slave",
+      "bestActor": "Matthew McConaughey",
+      "bestActress": "Cate Blanchett"
+    },
+    {
+      "year": 2012,
+      "bestPicture": "Argo",
+      "bestActor": "Daniel Day-Lewis",
+      "bestActress": "Jennifer Lawrence"
+    }
+  ]
+}

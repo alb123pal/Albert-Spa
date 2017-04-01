@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+
+<button type="button" onclick="test()">Click on me</button>
+
+<script type="text/javascript">
+    function test() {
+
+        var start = performance.now();
+
+        for (var i = 0; i < 1000; i++) {
+            var random = Math.floor(Math.random() * 100);
+            window.localStorage.setItem(i, random);
+        }
+        var koniec = performance.now();
+
+        console.log("Czas zapisania 1000 liczb do localstorage wynosi: " + (koniec - start ) + "w milisekundah");
+
+        var start = performance.now()
+        for (var i = 0; i < 100000; i++) {
+            var random = Math.floor(Math.random() * 100);
+            window.localStorage.setItem(i, random);
+        }
+
+        var koniec = performance.now();
+        console.log("Czas zapisania 100000 liczb do localstorage wynosi: " + (koniec - start ) + "w milisekundah");
+    }
+</script>
+</body>
+</html>

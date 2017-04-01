@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Currency Exchange Table</title>
+		<meta charset="UTF-8">
+		<script src="model.js"></script>
+		<script src="view.js"></script>
+		<script src="controller.js"></script>
+	</head>
+	<body onload="controller.updateView()">
+		<h1>Currency Exchange Table</h1>
+		<!-- list of currency exchange rates -->
+		<div id="dataview"></div>
+		<hr><!-- form to add new currency -->
+		<h3>Add new currency</h3>
+		<p>Currency code (e.g. EUR):<br>	
+		<input type="text" id="code" maxlength="3" ></p>
+		<p>Exchange rate (e.g. 4.02):<br>
+		<input type="text" id="rate" maxlength="4"></p>
+		<p>Currency name (e.g. Euro):<br>
+		<input type="text" id="name" maxlength="15"></p>
+		<input type="button" value="Add new currency" onclick="view.addCurrency()">
+	</body>
+</html>

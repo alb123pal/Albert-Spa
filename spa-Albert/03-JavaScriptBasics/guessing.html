@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Try to guess</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Try to guess</h1>
+
+		<script>
+			// read user's number (popup window)
+			var liczba = prompt("Wpisz liczbe: ");
+			// create a random number
+			var random = Math.floor((Math.random() * 5) + 1);
+			// compare the numbers
+			if (liczba == random){
+			    alert("Gratulacje, udało Ci sie zgadnąć");
+			} else {
+			    alert("Niestety, bledna liczba. Prawidlowa to: " + random);
+			}
+			// show results (popup window)
+			
+		</script>
+	</body>
+</html>

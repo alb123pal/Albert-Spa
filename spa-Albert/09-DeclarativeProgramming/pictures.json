@@ -1,0 +1,20 @@
+{
+  "pictures": [
+    {
+      "category": "capmus",
+      "URL": "http://ftppromocja.uek.krakow.pl/Zdjecia%20UEK/kampus/uek_kampus03.jpg"
+    },
+    {
+      "category": "students",
+      "URL": "http://ftppromocja.uek.krakow.pl/Zdjecia%20UEK/studenci/Sesja%202011/uek_studenci2011_029.jpg"
+    },
+    {
+      "category": "computerLab",
+      "URL": "http://ftppromocja.uek.krakow.pl/Zdjecia%20UEK/pracownie%20komputerowe/uek_komputery063.jpg"
+    },
+    {
+      "category": "event",
+      "URL": "http://ftppromocja.uek.krakow.pl/Zdjecia%20UEK/wyklady%20specjalne,%20imprezy/uek_wyklady_specjalne29.jpg"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <p id="serializacja"></p>
+    <h2></h2>
+</head>
+<body>
+
+<script>
+    var person = {
+        "name" : "Albert",
+        "surname": "Palka",
+        "age": 21,
+        "email": "albertpalka1995@gmail.com",
+        "phone": {
+        "landline": "+48",
+            "mobile": "662 793 549"
+    },
+
+        "adress" : {
+        "street" : "Aleja 3 Maja",
+            "numberHome" : 5,
+            "postalCode" : "34-500",
+            "city": "Zakopane"
+    },
+
+        "interest" : [
+        "football",
+        "coding",
+        "healty life-style"
+    ],
+        "family" : {
+        "girlfriend" : [
+            "Natalia",
+            "Wróbel"
+        ],
+            "brother" : [
+            "Szymon",
+            "Palka"
+        ]
+
+    },
+
+        "children" : [
+        {
+            "name": "Bartlomiej",
+            "surname": "Blaszczak",
+            "age" : 20
+        },
+        {
+            "name" : "Andrzej",
+            "surname": "Sowa",
+            "age" : 25
+
+        }
+    ]
+    }
+
+    var personString = JSON.stringify(person);
+    document.getElementById("serializacja").innerHTML = personString;
+    localStorage.setItem("serialization", personString);
+    console.log(localStorage.getItem("serialization"));)
+   var persongJSON = JSON.parse(personString);
+   document.getElementsByTagName("h2")[0].innerHTML = persongJSON.name;
+</script>
+</body
+</html>
