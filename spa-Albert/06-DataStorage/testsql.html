@@ -6,5 +6,52 @@
 </head>
 <body>
 
+<script type="text/javascript">
+
+    var db1 = openDatabase('baza', '1.0', 'Test DB', 1000 * 1024 * 1024);
+    var db2 = openDatabase('baza', '1.0', 'Test DB', 10000 * 1024 * 1024);
+    var db3 = openDatabase('baza', '1.0', 'Test DB', 100000 * 1024 * 1024);
+
+    var start = performance.now();
+
+    db1.transaction(function (tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (liczba)');
+        for (var i = 1; i <= 1000; i++) {
+            var random = Math.floor(Math.random() * 100);
+            tx.executeSql('INSERT INTO LOGS (liczba) VALUES (?)', [random]);
+        }
+    });
+
+    var koniec = performance.now();
+    console.log("Czas zapisania 1000 liczb do localstorage wynosi: " + (koniec - start ) + "w milisekundah");
+
+    db2.transaction(function (tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (liczba)');
+        for (var i = 1; i <= 10000; i++) {
+            var random = Math.floor(Math.random() * 100);
+            tx.executeSql('INSERT INTO LOGS (liczba) VALUES (?)', [random]);
+        }
+    });
+
+    var koniec = performance.now();
+    console.log("Czas zapisania 10000 liczb do localstorage wynosi: " + (koniec - start ) + "w milisekundah");
+
+    db3.transaction(function (tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (liczba)');
+        for (var i = 1; i <= 100000; i++) {
+            var random = Math.floor(Math.random() * 100);
+            tx.executeSql('INSERT INTO LOGS (liczba) VALUES (?)', [random]);
+        }
+    });
+
+    var koniec = performance.now();
+    console.log("Czas zapisania 100000 liczb do localstorage wynosi: " + (koniec - start ) + "w milisekundah");
+
+
+</script>
+
+<div id="status" name="status">Status Message</div>
+
+
 </body>
 </html>
