@@ -3,3 +3,8 @@ table, th , td{
     border-collapse: collapse;
 
 }
+
+.container{
+    padding-top: 10px;
+    left: 0px;
+}
