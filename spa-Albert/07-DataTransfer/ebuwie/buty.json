@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "marka": "adidas",
+    "price": 279,
+    "seria": "adidas Spring",
+    "zdjecie": "http://localhost:8080/ebuwie/adidas.jpg"
+
+  },
+  {
+    "id": 3,
+    "marka": "ecco",
+    "price": 549,
+    "seria": "ecco Spring",
+    "zdjecie": "http://localhost:8080/ebuwie/ecco.jpg"
+  },
+  {
+    "id": 2,
+    "marka": "klein",
+    "price": 730,
+    "seria": "Klein Spring",
+    "zdjecie": "http://localhost:8080/ebuwie/klein.jpg"
+
+  }
+
+
+]
