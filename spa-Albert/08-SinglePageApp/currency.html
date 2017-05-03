@@ -3,9 +3,36 @@
 	<head>
 		<title>Currency Exchange Table</title>
 		<meta charset="UTF-8">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 		<script src="model.js"></script>
 		<script src="view.js"></script>
 		<script src="controller.js"></script>
+
+		<style>
+			table, td, th {
+				border: 1px solid #ddd;
+				text-align: left;
+			}
+
+			table {
+				border-collapse: collapse;
+				width: 100%;
+			}
+
+			thead {
+				font-weight: bold;
+			}
+
+			th, td {
+				padding: 15px;
+			}
+		</style>
+
 	</head>
 	<body onload="controller.updateView()">
 		<h1>Currency Exchange Table</h1>
@@ -13,8 +40,19 @@
 		<div id="dataview"></div>
 		<hr><!-- form to add new currency -->
 		<h3>Add new currency</h3>
-		<p>Currency code (e.g. EUR):<br>	
-		<input type="text" id="code" maxlength="3" ></p>
+		<p>Currency code (e.g. EUR):<br>
+		<div class="dropdown">
+                <select class="btn btn-primary dropdown-toogle" id="code" type="button" data-toggle="dropdown">
+                    <option>EUR</option>
+                    <option>USD</option>
+                    <option>GBP</option>
+                    <option>CHF</option>
+                    <option>CZK</option>
+                    <option>HRK</option>
+                    <option>HUF</option>
+                </select>
+
+        </div>
 		<p>Exchange rate (e.g. 4.02):<br>
 		<input type="text" id="rate" maxlength="4"></p>
 		<p>Currency name (e.g. Euro):<br>
