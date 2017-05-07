@@ -13,7 +13,6 @@ var model = {
                 tx.executeSql('CREATE TABLE IF NOT EXISTS WALUTY (storage)');
                 tx.executeSql('INSERT INTO WALUTY (storage) VALUES (?'), [this.storage];
                 msg = 'Log message created and row inserted.';
-                console.log(msg);
             });
 
 

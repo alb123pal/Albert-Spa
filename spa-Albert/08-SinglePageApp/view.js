@@ -39,6 +39,62 @@ var view = {
             var cell3 = document.createElement("td");
 
             var cell1Text = document.createTextNode(data[i].code);
+
+            $.getJSON("http://api.nbp.pl/api/exchangerates/rates/a/usd/?format=json", function (data) {
+                rate = data.rates[0].mid;
+                document.getElementById('rate').value = rate;
+
+            });
+
+            var waluta = ($('#code').find(":selected").text());
+            console.log("waluta:" + waluta);
+            switch (waluta.toLocaleLowerCase()) {
+                case "eur":
+                    $.getJSON("http://api.nbp.pl/api/exchangerates/rates/a/eur/?format=json", function (data) {
+                        rate = data.rates[0].mid;
+                        document.getElementById('rate').value = rate;
+                    });
+                    break;
+
+                case "usd":
+                    $.getJSON("http://api.nbp.pl/api/exchangerates/rates/a/usd/?format=json", function (data) {
+                        rate = data.rates[0].mid;
+                        document.getElementById('rate').value = rate;
+                    });
+                    break;
+                case "gbp":
+                    $.getJSON("http://api.nbp.pl/api/exchangerates/rates/a/gbp/?format=json", function (data) {
+                        rate = data.rates[0].mid;
+                        document.getElementById('rate').value = rate;
+                    });
+                    break;
+                case "chf":
+                    $.getJSON("http://api.nbp.pl/api/exchangerates/rates/a/chf/?format=json", function (data) {
+                        rate = data.rates[0].mid;
+                        document.getElementById('rate').value = rate;
+                    });
+                    break;
+                case "czk":
+                    $.getJSON("http://api.nbp.pl/api/exchangerates/rates/a/czk/?format=json", function (data) {
+                        rate = data.rates[0].mid;
+                        document.getElementById('rate').value = rate;
+                    });
+                    break;
+                case "hrk":
+                    $.getJSON("http://api.nbp.pl/api/exchangerates/rates/a/hrk/?format=json", function (data) {
+                        rate = data.rates[0].mid;
+                        document.getElementById('rate').value = rate;
+                    });
+                    break;
+                case "huf":
+                    $.getJSON("http://api.nbp.pl/api/exchangerates/rates/a/huf/?format=json", function (data) {
+                        rate = data.rates[0].mid;
+                        document.getElementById('rate').value = rate;
+                    });
+                    break;
+
+            }
+
             var cell2Text = document.createTextNode(data[i].name);
             var cell3Text = document.createTextNode(data[i].rate);
 
